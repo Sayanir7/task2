@@ -410,7 +410,7 @@ getFacts();
 
 
 // Get the reference to the div element
-
+var myDiv = document.getElementById("cont2");
 
 // Function to hide the div after a time period
 // function hideDiv() {
