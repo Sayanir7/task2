@@ -356,8 +356,10 @@ const getFacts = async () =>{
 
     const running=document.querySelector(".running");
     running.innerText="   "+data[0].content+"   "+data[1].content+"   "+data[2].content+"   "+data[3].content+"   "+data[4].content+"   "+data[5].content+"   "+data[6].content+"   "+data[7].content+"   "+data[8].content+"   "+data[9].content;
-    
-
+    var myDiv1 = document.getElementById("cont1");
+    myDiv1.innerText=data[0].content;
+    var myDiv = document.getElementById("cont2");
+    myDiv.innerText=data[1].content;
 
 
 
@@ -381,16 +383,37 @@ getFacts();
      var contentBox = document.getElementById('cont1');
     if (contentBox.style.display === 'none' || contentBox.style.display === '') {
          contentBox.style.display = 'block';
-    } else {
+    }
+    
+     else {
         contentBox.style.display = 'none';
      }
+     function hideDiv() {
+        contentBox.style.display = "none";
+        }
+        setTimeout(hideDiv, 3000); 
  });
-
- document.getElementById('div2').addEventListener('click', function() {
+ 
+ document.getElementById('div2').addEventListener('hover', function() {
     var contentBox = document.getElementById('cont2');
    if (contentBox.style.display === 'none' || contentBox.style.display === '') {
         contentBox.style.display = 'block';
-   } else {
+   }   else {
        contentBox.style.display = 'none';
+   }
+   function hideDiv() {
+    contentBox.style.display = "none";
     }
+    setTimeout(hideDiv, 3000); 
+ 
 });
+
+
+// Get the reference to the div element
+
+
+// Function to hide the div after a time period
+// function hideDiv() {
+//     myDiv.style.display = "none";
+// }
+// setTimeout(hideDiv, 3000);
