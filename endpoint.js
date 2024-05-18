@@ -394,7 +394,7 @@ getFacts();
         setTimeout(hideDiv, 3000); 
  });
  
- document.getElementById('div2').addEventListener('hover', function() {
+ document.getElementById('div2').addEventListener('click', function() {
     var contentBox = document.getElementById('cont2');
    if (contentBox.style.display === 'none' || contentBox.style.display === '') {
         contentBox.style.display = 'block';
